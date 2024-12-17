@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Doctor Appointment System</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <script src="script.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#doctor-categories">Doctor Categories</a></li>
+                <li><a href="#appointment-form">Book Appointment</a></li>
+                <li><a href="#login">Login</a></li>
+                <li><a href="#signup">Signup</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h1>Welcome to the Online Doctor Appointment System</h1>
+        <p>Book your doctor's appointment easily and quickly.</p>
+    </section>
+
+    <section id="doctor-categories">
+        <h2>Doctor Categories</h2>
+        <ul>
+            <li><a href="#">General Practitioner</a></li>
+            <li><a href="#">Cardiologist</a></li>
+            <li><a href="#">Dermatologist</a></li>
+            <li><a href="#">Neurologist</a></li>
+            <li><a href="#">Pediatrician</a></li>
+        </ul>
+    </section>
+
+    <section id="appointment-form">
+        <h2>Book an Appointment</h2>
+        <form action="submit_appointment.js" method="POST">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="doctor">Choose a Doctor:</label>
+            <select id="doctor" name="doctor" required>
+                <option value="general-practitioner">General Practitioner</option>
+                <option value="cardiologist">Cardiologist</option>
+                <option value="dermatologist">Dermatologist</option>
+                <option value="neurologist">Neurologist</option>
+                <option value="pediatrician">Pediatrician</option>
+            </select>
+
+            <label for="date">Appointment Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <button type="submit">Book Appointment</button>
+        </form>
+    </section>
+  
+    <section id="login">
+        <h2>Login</h2>
+        <form action="login.js" method="POST">
+        
+            <label for="loginEmail">Email:</label>
+                <input type="email" id="loginEmail" placeholder="Enter your email" required>
+                <label for="loginPassword">Password:</label>
+                <input type="password" id="loginPassword" placeholder="Enter your password" required>
+                <button type="submit">Login</button>
+                <p>Don't have an account? <a href="javascript:void(0)" id="showSignup">Sign Up</a></p>
+        </form>
+    </section>
+
+    <section id="signup">
+        <h2>Signup</h2>
+        <form action="signup.js" method="POST">
+            <label for="signupEmail">Email:</label>
+            <input type="email" id="signupEmail" placeholder="Enter your email" required>
+            <label for="signupPassword">Password:</label>
+            <input type="password" id="signupPassword" placeholder="Enter your password" required>
+            <button type="submit">Sign Up</button>
+            <p>Already have an account? <a href="javascript:void(0)" id="showLogin">Login</a></p>
+
+        </form>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions, feel free to reach us:</p>
+        <form action="contact.js" method="POST">
+            <label for="contact-name">Full Name:</label>
+            <input type="text" id="contact-name" name="contact-name" required>
+
+            <label for="contact-email">Email Address:</label>
+            <input type="email" id="contact-email" name="contact-email" required>
+
+            <label for="contact-message">Message:</label>
+            <textarea id="contact-message" name="contact-message" rows="4" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>We provide a user-friendly platform for booking doctor's appointments. Our mission is to make healthcare more accessible and convenient for everyone.
+         Our platform is designed to simplify the way you connect with healthcare professionals, making it easier, faster, and more convenient to schedule doctor appointments from anywhere, at any time.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Online Doctor Appointment System. All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>
